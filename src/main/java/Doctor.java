@@ -1,3 +1,9 @@
+import org.sql2o.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+
 public class Doctor {
   private int id;
   private String name;
@@ -48,7 +54,7 @@ public class Doctor {
 //     }
 //   }
 //
-//   public static Doctor find (int id) {
+//   public static Doctor find(int id) {
 //     try(Connection con = DB.sql2o.open()) {
 //       String sql = "SELECT * FROM doctors where id=:id";
 //       Doctor Doctor = con.createQuery(sql)
