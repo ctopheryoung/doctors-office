@@ -59,8 +59,8 @@ public class Doctor {
     try(Connection con = DB.sql2o.open()) {
       String sql = "SELECT * FROM doctors where id=:id";
       Doctor Doctor = con.createQuery(sql)
-      .addParameter("id", id);
-      executeAndFetchFirst(Doctor.class);
+      .addParameter("id", id)
+      .executeAndFetchFirst(Doctor.class);
       return Doctor;
     }
   }
